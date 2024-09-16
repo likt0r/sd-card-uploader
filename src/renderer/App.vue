@@ -1,38 +1,25 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-
-window.electronAPI.sendMessage("Hello from App.vue!");
-
-function sendMessage(message: string) {
-   window.electronAPI.sendMessage("Received message:" + message);
-}
+<script setup lang="tsx">
+import { DefaultLayout } from '@/renderer/components/layout'
 </script>
 
 <template>
-   <h1>Hello App!</h1>
-
-   <p><strong>Current route path:</strong> {{ $route }}</p>
-   <router-link to="/">Goto Start</router-link>
-   <nav>
-      <router-link to="/">Goto Start</router-link>
-      <router-link to="/import-data">Import Data from SD-Card</router-link>
-   </nav>
-   <main>
-      <RouterView />
-   </main>
+  <DefaultLayout>
+    <router-view />
+  </DefaultLayout>
 </template>
 
-<style scoped>
-.logo {
-   height: 6em;
-   padding: 1.5em;
-   will-change: filter;
-   transition: filter 300ms;
+<style>
+html {
+  overflow-y: auto !important;
+  user-select: none;
 }
-.logo:hover {
-   filter: drop-shadow(0 0 2em #646cffaa);
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
-.logo.vue:hover {
-   filter: drop-shadow(0 0 2em #42b883aa);
+/* Do not force capitalization of button text */
+.v-btn {
+  text-transform: unset !important;
 }
 </style>

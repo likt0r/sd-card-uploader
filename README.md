@@ -1,77 +1,47 @@
-<div align="center"> 
+<div align="center">
 
-# Electron Vue Template
-  
-<img width="794" alt="image" src="https://user-images.githubusercontent.com/32544586/222748627-ee10c9a6-70d2-4e21-b23f-001dd8ec7238.png">
+![vutron-logo](src/renderer/public/images/vutron-logo.webp)
 
-A simple starter template for a **Vue3** + **Electron** TypeScript based application, including **ViteJS** and **Electron Builder**.
+---
+
+Quick Start Templates for **[Vite](https://vitejs.dev)** + **[Vue 3](https://vuejs.org)** + **[Electron](https://www.electronjs.org)**
+
+[![awesome-vite](https://awesome.re/mentioned-badge.svg)](https://github.com/vitejs/awesome-vite) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jooy2/vutron/blob/master/LICENSE) ![Stars](https://img.shields.io/github/stars/jooy2/vutron?style=social) ![Commit Count](https://img.shields.io/github/commit-activity/y/jooy2/vutron) [![Followers](https://img.shields.io/github/followers/jooy2?style=social)](https://github.com/jooy2)
+
+![vutron-logo](.github/resources/vutron-sample.webp)
+
+**English** · [한국어](https://github.com/jooy2/vutron/blob/master/README.ko-KR.md) · [简体中文](https://github.com/jooy2/vutron/blob/master/README.zh-CN.md)
+
+**Vutron** is a preconfigured template for developing `Electron` cross-platform desktop apps. It uses `Vue 3` and allows you to build a fast development environment with little effort.
+
 </div>
 
-## About
+## Advantages of use
 
-This template utilizes [ViteJS](https://vitejs.dev) for building and serving your (Vue powered) front-end process, it provides Hot Reloads (HMR) to make development fast and easy ⚡ 
+- ✅ You can build immediately without any presets, so you can develop quickly.
+- ✅ It is being maintained quickly to be compatible with the latest `Vue` and `Electron`, as well as many modules.
+- ✅ There is no need to worry about layout and data management by using various additional templates.
 
-Building the Electron (main) process is done with [Electron Builder](https://www.electron.build/), which makes your application easily distributable and supports cross-platform compilation 😎
+## Features
 
-## Getting started
+- ⚡️ Rapid development through hot-reload
+- ⚡️ Cross-platform development and build support
+- ⚡️ Support for automated application testing
+- ⚡️ TypeScript support
+- ⚡️ Multilingual support
+- ⚡️ Support for themes (dark & light)
+- ⚡️ Basic layout manager
+- ⚡️ Global state management through the Pinia store
+- ⚡️ Quick support through the GitHub community and official documentation
 
-Click the green **Use this template** button on top of the repository, and clone your own newly created repository.
+## [Documentation (Getting Started)](https://vutron.cdget.com/installation-and-build/getting-started)
 
-**Or..**
+For complete documentation including installation instructions and basic usage, please refer to each item in the link below: https://vutron.cdget.com/installation-and-build/getting-started
 
-Clone this repository: `git clone git@github.com:Deluze/electron-vue-template.git`
+## Contribute
 
+You can report issues on [GitHub Issue](https://github.com/jooy2/vutron/issues). You can also request a pull to fix bugs and add frequently used features.
 
-### Install dependencies ⏬
+## License
 
-```bash
-npm install
-```
-
-### Start developing ⚒️
-
-```bash
-npm run dev
-```
-
-## Additional Commands
-
-```bash
-npm run dev # starts application with hot reload
-npm run build # builds application, distributable files can be found in "dist" folder
-
-# OR
-
-npm run build:win # uses windows as build target
-npm run build:mac # uses mac as build target
-npm run build:linux # uses linux as build target
-```
-
-Optional configuration options can be found in the [Electron Builder CLI docs](https://www.electron.build/cli.html).
-## Project Structure
-
-```bash
-- scripts/ # all the scripts used to build or serve your application, change as you like.
-- src/
-  - main/ # Main thread (Electron application source)
-  - renderer/ # Renderer thread (VueJS application source)
-```
-
-## Using static files
-
-If you have any files that you want to copy over to the app directory after installation, you will need to add those files in your `src/main/static` directory.
-
-Files in said directory are only accessible to the `main` process, similar to `src/renderer/public` only being accessible to the `renderer` process. Besides that, the concept is the same as to what you're used to in your front-end projects.
-
-#### Referencing static files from your main process
-
-```ts
-/* Assumes src/main/static/myFile.txt exists */
-
-import {app} from 'electron';
-import {join} from 'path';
-import {readFileSync} from 'fs';
-
-const path = join(app.getAppPath(), 'static', 'myFile.txt');
-const buffer = readFileSync(path);
-```
+Copyright © 2022-2024 [CDGet](https://cdget.com) <[jooy2.contact@gmail.com](mailto:jooy2.contact@gmail.com)> Released under the MIT license.

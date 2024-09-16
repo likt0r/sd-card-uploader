@@ -1,17 +1,21 @@
 import { createApp } from 'vue'
-import './style.css';
-import App from './App.vue'
+import { createPinia } from 'pinia'
 
-// Vuetify
-import 'vuetify/styles'
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
-import router from './router'
+import App from '@/renderer/App.vue'
+import router from '@/renderer/router'
+import vuetify from '@/renderer/plugins/vuetify'
+import i18n from '@/renderer/plugins/i18n'
 
-const vuetify = createVuetify({
-    components,
-    directives,
-})
-createApp(App).use(router).mount('#app');
+// Add API key defined in contextBridge to window object type
+declare global {
+  // eslint-disable-next-line no-unused-vars
+  interface Window {
+    mainApi?: any
+  }
+}
 
+const app = createApp(App)
+
+app.use(vuetify).use(i18n).use(router).use(createPinia())
+
+app.mount('#app')

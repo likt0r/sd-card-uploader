@@ -2,7 +2,7 @@
     "workbench.settings.useSplitJSON": true,
     "eslint.codeActionsOnSave.rules": null,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+      "source.fixAll.eslint": "explicit"
     },
     "eslint.validate": [
         "javascript"
@@ -17,5 +17,8 @@
     "editor.wordWrap": "on",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "i18n-ally.localesPaths": [
+      "src/renderer/locales"
+    ]
 }

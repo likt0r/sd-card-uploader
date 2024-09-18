@@ -34,6 +34,6 @@ export default class IPCs {
     ipcMain.handle("getDriveList" , async (event: IpcMainEvent) => {
       const drives = require('drivelist')
       return await drives.list()
-    }
+    });
   }
 }
